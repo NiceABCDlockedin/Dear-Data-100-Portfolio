@@ -1,0 +1,14 @@
+Requirements:
+- I want to make a visualisation of the transportation methods that I have used recently.
+- I will gather 100 pieces of data as to the methods of transport that I have used, including:
+  the date, 
+  the type,
+  the time I touched in,
+  whether the transport method was late or not,
+  the time I touched out (if applicable as bus routes do not give a touch out time),
+  the reason for why I travelled.
+- The data will span around 30-45 days of travel dependent on if I go out on a specific day.
+- The data I collect will use abstraction to remove unnecessary details in order to protect my identity, such as: 
+  the route numbers, 
+  my final destination,
+  my beginning destination.
