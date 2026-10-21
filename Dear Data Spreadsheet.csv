@@ -1,66 +1,74 @@
-﻿ID,Date,Type,Touch In,Status,Touch Out,Reason
-1,30/09/2026,BD,17:36,On Time,N/A,Leisure
-2,30/09/2026,SL,18:05,On Time,N/A,Leisure
-3,01/10/2026,SL,12:14,On Time,N/A,Leisure
-4,01/10/2026,BD,12:52,On Time,N/A,Leisure
-5,01/10/2026,LO,12:57,On Time,13:21,Leisure
-6,01/10/2026,BD,13:24,On Time,N/A,Leisure
-7,01/10/2026,BD,13:47,On Time,N/A,Leisure
-8,04/10/2026,BD,13:42,On Time,N/A,Leisure
-9,04/10/2026,SL,14:02,On Time,N/A,Leisure
-10,05/10/2026,SL,07:16,Late,N/A,University
-11,05/10/2026,EL,07:39,On Time,08:19,University
-12,05/10/2026,BD,08:24,On Time,N/A,University
-13,05/10/2026,EL,16:21,On Time,16:57,Leisure
-14,05/10/2026,24,17:45,Late,N/A,Leisure
-15,06/10/2026,SL,07:25,On Time,N/A,University
-16,06/10/2026,EL,07:46,On Time,08:28,University
-17,06/10/2026,BD,13:01,On Time,N/A,Leisure
-18,06/10/2026,EL,13:11,On Time,13:48,Leisure
-19,06/10/2026,SL,13:52,On Time,N/A,Leisure
-20,06/10/2026,BD,15:22,On Time,N/A,Leisure
-21,06/10/2026,BD,15:46,Late,N/A,Leisure
-22,07/10/2026,SL,13:04,On Time,N/A,University
-23,07/10/2026,EL,13:25,On Time,14:09,University
-24,07/10/2026,EL,18:12,On Time,18:24,Leisure
-25,07/10/2026,EL,18:47,On Time,19:32,Leisure
-26,07/10/2026,SL,19:38,On Time,N/A,Leisure
-27,08/10/2026,SL,12:56,On Time,N/A,University
-28,08/10/2026,EL,13:16,On Time,13:59,University
-29,08/10/2026,BD,14:06,On Time,N/A,University
-30,08/10/2026,LU,18:10,On Time,18:20,Leisure
-31,09/10/2026,LU,10:02,On Time,10:12,University
-32,09/10/2026,BD,10:17,On Time,N/A,University
-33,09/10/2026,BD,16:07,On Time,N/A,Leisure
-34,09/10/2026,EL,16:16,On Time,16:53,Leisure
-35,09/10/2026,BD,17:01,On Time,N/A,Leisure
-36,09/10/2026,BD,17:56,On Time,N/A,Leisure
-37,12/10/2026,SL,07:40,On Time,N/A,University
-38,12/10/2026,EL,07:59,On Time,08:40,University
-39,12/10/2026,BD,08:42,On Time,N/A,University
-40,12/10/2026,EL,16:07,On Time,16:48,Leisure
-41,12/10/2026,BD,16:51,On Time,N/A,Leisure
-42,13/10/2026,SL,07:37,Late,N/A,University
-43,13/10/2026,EL,08:01,On Time,08:39,University
-44,13/10/2026,BD,08:47,Late,N/A,University
-45,13/10/2026,EL,17:08,On Time,17:49,Leisure
-46,13/10/2026,SL,17:56,On Time,N/A,Leisure
-47,14/10/2026,BD,13:32,On Time,N/A,Leisure
-48,14/10/2026,BD,17:41,On Time,N/A,Leisure
-49,14/10/2026,SL,18:14,On Time,N/A,Leisure
-50,15/10/2026,SL,12:23,On Time,N/A,University
-51,15/10/2026,EL,12:43,On Time,13:22,University
-52,15/10/2026,BD,13:25,On Time,N/A,University
-53,15/10/2026,EL,18:12,On Time,18:24,Leisure
-54,15/10/2026,NR,20:04,On Time,20:29,Leisure
-55,15/10/2026,SL,20:32,On Time,N/A,Leisure
-56,16/10/2026,SL,08:55,On Time,N/A,University
-57,16/10/2026,EL,09:18,On Time,09:57,University
-58,16/10/2026,BD,10:00,On Time,N/A,University
-59,16/10/2026,EL,16:12,On Time,16:53,Leisure
-60,16/10/2026,SL,16:56,On Time,N/A,Leisure
-61,19/10/2026,SL,07:34,On Time,N/A,University
-62,19/10/2026,EL,07:55,On Time,08:37,University
-63,19/10/2026,BD,08:45,On Time,N/A,University
-64,19/10/2026,LU,16:07,On Time,17:14,Leisure
-65,19/10/2026,BD,17:19,On Time,N/A,Leisure
+ID	Date	Type	Touch In	Status	Touch Out	Reason
+1	30/09/2026	BD	17:36	On Time	N/A	Leisure
+2	30/09/2026	SL	18:05	On Time	N/A	Leisure
+3	01/10/2026	SL	12:14	On Time	N/A	Leisure
+4	01/10/2026	BD	12:52	On Time	N/A	Leisure
+5	01/10/2026	LO	12:57	On Time	13:21	Leisure
+6	01/10/2026	BD	13:24	On Time	N/A	Leisure
+7	01/10/2026	BD	13:47	On Time	N/A	Leisure
+8	04/10/2026	BD	13:42	On Time	N/A	Leisure
+9	04/10/2026	SL	14:02	On Time	N/A	Leisure
+10	05/10/2026	SL	07:16	Late	N/A	University
+11	05/10/2026	EL	07:39	On Time	08:19	University
+12	05/10/2026	BD	08:24	On Time	N/A	University
+13	05/10/2026	EL	16:21	On Time	16:57	Leisure
+14	05/10/2026	24	17:45	Late	N/A	Leisure
+15	06/10/2026	SL	07:25	On Time	N/A	University
+16	06/10/2026	EL	07:46	On Time	08:28	University
+17	06/10/2026	BD	13:01	On Time	N/A	Leisure
+18	06/10/2026	EL	13:11	On Time	13:48	Leisure
+19	06/10/2026	SL	13:52	On Time	N/A	Leisure
+20	06/10/2026	BD	15:22	On Time	N/A	Leisure
+21	06/10/2026	BD	15:46	Late	N/A	Leisure
+22	07/10/2026	SL	13:04	On Time	N/A	University
+23	07/10/2026	EL	13:25	On Time	14:09	University
+24	07/10/2026	EL	18:12	On Time	18:24	Leisure
+25	07/10/2026	EL	18:47	On Time	19:32	Leisure
+26	07/10/2026	SL	19:38	On Time	N/A	Leisure
+27	08/10/2026	SL	12:56	On Time	N/A	University
+28	08/10/2026	EL	13:16	On Time	13:59	University
+29	08/10/2026	BD	14:06	On Time	N/A	University
+30	08/10/2026	LU	18:10	On Time	18:20	Leisure
+31	09/10/2026	LU	10:02	On Time	10:12	University
+32	09/10/2026	BD	10:17	On Time	N/A	University
+33	09/10/2026	BD	16:07	On Time	N/A	Leisure
+34	09/10/2026	EL	16:16	On Time	16:53	Leisure
+35	09/10/2026	BD	17:01	On Time	N/A	Leisure
+36	09/10/2026	BD	17:56	On Time	N/A	Leisure
+37	12/10/2026	SL	07:40	On Time	N/A	University
+38	12/10/2026	EL	07:59	On Time	08:40	University
+39	12/10/2026	BD	08:42	On Time	N/A	University
+40	12/10/2026	EL	16:07	On Time	16:48	Leisure
+41	12/10/2026	BD	16:51	On Time	N/A	Leisure
+42	13/10/2026	SL	07:37	Late	N/A	University
+43	13/10/2026	EL	08:01	On Time	08:39	University
+44	13/10/2026	BD	08:47	Late	N/A	University
+45	13/10/2026	EL	17:08	On Time	17:49	Leisure
+46	13/10/2026	SL	17:56	On Time	N/A	Leisure
+47	14/10/2026	BD	13:32	On Time	N/A	Leisure
+48	14/10/2026	BD	17:41	On Time	N/A	Leisure
+49	14/10/2026	SL	18:14	On Time	N/A	Leisure
+50	15/10/2026	SL	12:23	On Time	N/A	University
+51	15/10/2026	EL	12:43	On Time	13:22	University
+52	15/10/2026	BD	13:25	On Time	N/A	University
+53	15/10/2026	EL	18:12	On Time	18:24	Leisure
+54	15/10/2026	NR	20:04	On Time	20:29	Leisure
+55	15/10/2026	SL	20:32	On Time	N/A	Leisure
+56	16/10/2026	SL	08:55	On Time	N/A	University
+57	16/10/2026	EL	09:18	On Time	09:57	University
+58	16/10/2026	BD	10:00	On Time	N/A	University
+59	16/10/2026	EL	16:12	On Time	16:53	Leisure
+60	16/10/2026	SL	16:56	On Time	N/A	Leisure
+61	19/10/2026	SL	07:34	On Time	N/A	University
+62	19/10/2026	EL	07:55	On Time	08:37	University
+63	19/10/2026	BD	08:45	On Time	N/A	University
+64	19/10/2026	LU	16:07	On Time	17:14	Leisure
+65	19/10/2026	BD	17:19	On Time	N/A	Leisure
+66	20/10/2026	SL	07:24	On Time	N/A	University
+67	20/10/2026	EL	07:44	On Time	08:27	University
+68	20/10/2026	BD	13:02	On Time	N/A	Leisure
+69	20/10/2026	EL	13:10	On Time	13:46	Leisure
+70	20/10/2026	SL	13:53	On Time	N/A	Leisure
+71	21/10/2026	SL		On Time	N/A	Leisure
+72	21/10/2026	BD		On Time	N/A	Leisure
+73	21/10/2026	SL		On Time	N/A	Leisure
