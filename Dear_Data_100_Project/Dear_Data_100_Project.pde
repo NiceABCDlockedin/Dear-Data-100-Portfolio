@@ -5,6 +5,7 @@
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import processing.sound.*;
 
 Table table;
 int[] ids;
@@ -14,14 +15,15 @@ LocalTime[] touchIns;
 String[] statuses;
 LocalTime[] touchOuts;
 String[] reasons;
-
+SoundFile music;
 //This will hold all the values passed back from the TransportMethod class.
 TransportMethod[] methods;
 
 
 void setup() {
   size(1000,1000);
-  
+  music = new SoundFile(this, "Internal Needs.mp3");
+  music.loop();
   //Loads in the CSV file.
   table = loadTable("C:/Users/pnurd/OneDrive - City St George's, University of London/MSci Computer Science (G401)/Year 1/Programming in Java - IN1007/Creative Coding/Portfolio/Dear Data Spreadsheet.csv", "header, csv");
 
@@ -107,6 +109,8 @@ void setup() {
       dates[i],
       touchIns[i],
       types[i],
+      reasons[i],
+      statuses[i],
       minDate,
       maxDate,
       100,         //Top margin for Y position
@@ -135,8 +139,8 @@ class TransportMethod {
   color colour;     //Colour to be used on the ball
   float yPos;
   
-  //The constructor method for the class which takes in the date of travel, the time that I touched in, the type of travel as well as defining a separate y position variable.
-  TransportMethod(LocalDate date, LocalTime touchIn, String type, LocalDate minDate, LocalDate maxDate, float minY, float maxY) {
+  //The constructor method takes in the travel details used to position and colour each ball.
+  TransportMethod(LocalDate date, LocalTime touchIn, String type, String reason, String status, LocalDate minDate, LocalDate maxDate, float minY, float maxY) {
     radius = 15;
     
     //Making it so that the x position is mapped to the time which will give the total number of seconds using getHour(), getMinute() and the range will be between 0 and 86400.
@@ -162,8 +166,8 @@ class TransportMethod {
     if (type == null) {
       type = "";
     }
-    //Will call a method outside the constructor to assign a colour for that ball.
-    colour = getColourforType(type);
+    //The transport type sets the base colour and the reason adds a tint and late journeys are darkened whereas on time journeys are not.
+    colour = adjustColour(getColourforType(type), reason, status);
   }
   
   //From below this constructor are the methods I am using the find the colour to be associated based on the type of transportation used as well as to draw the ball and these will be associated with any instance of a TransportMethod object.
@@ -182,6 +186,29 @@ class TransportMethod {
       case "BN": return color(0,32,96);
       default: return color(255,255,255);
     }
+  }
+  //This is the adjustColour method, and this takes in the original colour that was returned from getColourforType() and then takes in the reason and status as Strings and darkens the colour if the journey was Late and adds a tint based on the reason for travel.
+  color adjustColour(color baseColour, String reason, String status) {
+    color adjustedColour = baseColour;
+
+    if (reason != null) {
+      if (reason.trim().equalsIgnoreCase("University")) {
+        //lerpColor() is used to blend the base colour with a new colour
+        adjustedColour = lerpColor(adjustedColour, color(100, 160, 255), 0.12);
+      } else if (reason.trim().equalsIgnoreCase("Leisure")) {
+        adjustedColour = lerpColor(adjustedColour, color(255, 190, 100), 0.12);
+      }
+    }
+
+    if (status != null && status.trim().equalsIgnoreCase("Late")) {
+      adjustedColour = color(
+        red(adjustedColour) * 0.8,
+        green(adjustedColour) * 0.8,
+        blue(adjustedColour) * 0.8
+      );
+    }
+
+    return adjustedColour;
   }
   
   //This is the draw method which will draw the ball at the current position.
