@@ -117,6 +117,12 @@ void setup() {
 
 void draw() {
   background(255);
+  stroke(0);
+  strokeWeight(2);
+  line(10, 0, 10, height-10);
+  line(10, height-10, width - 10, height-10);
+  noStroke();
+
   for (TransportMethod m : methods) {
     m.draw();
   }
