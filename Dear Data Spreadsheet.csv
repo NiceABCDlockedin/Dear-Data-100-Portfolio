@@ -73,8 +73,8 @@ ID,Date,Type,Touch In,Status,Touch Out,Reason
 72,21/10/2026,BD,12:52,On Time,N/A,Leisure
 73,21/10/2026,SL,13:22,On Time,N/A,Leisure
 74,22/10/2026,BD,13:41,On Time,N/A,Leisure
-75,23/10/2026,SL,,On Time,N/A,University
-76,23/10/2026,EL,,On Time,,University
-77,23/10/2026,BD,,On Time,N/A,University
-78,23/10/2026,EL,,On Time,,Leisure
-79,23/10/2026,SL,,On Time,N/A,Leisure
+75,23/10/2026,SL,08:46,On Time,N/A,University
+76,23/10/2026,EL,09:11,On Time,09:51,University
+77,23/10/2026,BD,09:54,On Time,N/A,University
+78,23/10/2026,EL,16:06,On Time,16:47,Leisure
+79,23/10/2026,SL,17:19,On Time,N/A,Leisure
