@@ -84,3 +84,14 @@ ID,Date,Type,Touch In,Status,Touch Out,Reason
 83,24/10/2026,SL,15:58,On Time,N/A,Leisure
 84,24/10/2026,BD,16:43,On Time,N/A,Leisure
 85,24/10/2026,BD,16:55,On Time,N/A,Leisure
+86,26/10/2026,SL,07:15,On Time,N/A,University
+87,26/10/2026,EL,07:33,On Time,08:15,University
+88,26/10/2026,BD,08:19,On Time,N/A,University
+89,26/10/2026,EL,16:04,On Time,16:16,Leisure
+90,26/10/2026,LU,16:40,On Time,17:06,Leisure
+91,27/10/2026,BD,17:12,On Time,N/A,Leisure
+92,27/10/2026,SL,07:08,On Time,N/A,University
+93,27/10/2026,EL,07:29,Late,08:14,University
+94,27/10/2026,BD,12:57,On Time,N/A,Leisure
+95,27/10/2026,EL,13:05,On Time,13:39,Leisure
+96,27/10/2026,SL,13:43,On Time,N/A,Leisure
