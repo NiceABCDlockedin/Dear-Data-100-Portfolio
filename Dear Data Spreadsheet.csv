@@ -103,3 +103,8 @@ ID,Date,Type,Touch In,Status,Touch Out,Reason
 102,30/10/2026,EL,16:06,Late,16:27,Leisure
 103,30/10/2026,LU,16:33,On Time,17:06,Leisure
 104,30/10/2026,BD,17:17,On Time,N/A,Leisure
+105,02/11/2026,SL,07:04,On Time,N/A,University
+106,02/11/2026,EL,07:25,Late,08:06,University
+107,02/11/2026,BD,15:49,On Time,N/A,Leisure
+108,02/11/2026,LU,15:57,On Time,17:13,Leisure
+109,02/11/2026,BD,17:23,On Time,N/A,Leisure
