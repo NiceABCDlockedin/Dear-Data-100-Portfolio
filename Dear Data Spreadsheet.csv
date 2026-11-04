@@ -108,3 +108,11 @@ ID,Date,Type,Touch In,Status,Touch Out,Reason
 107,02/11/2026,BD,15:49,On Time,N/A,Leisure
 108,02/11/2026,LU,15:57,On Time,17:13,Leisure
 109,02/11/2026,BD,17:23,On Time,N/A,Leisure
+110,03/11/2026,SL,07:04,On Time,N/A,University
+111,03/11/2026,EL,07:26,On Time,08:03,University
+112,03/11/2026,BD,12:57,On Time,N/A,Leisure
+113,03/11/2026,EL,13:06,Late,13:51,Leisure
+114,03/11/2026,SL,14:01,On Time,N/A,Leisure
+115,03/11/2026,BD,16:17,On Time,N/A,Leisure
+116,03/11/2026,SL,16:39,On Time,N/A,Leisure
+,,,,,,
