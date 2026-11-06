@@ -115,4 +115,9 @@ ID,Date,Type,Touch In,Status,Touch Out,Reason
 114,03/11/2026,SL,14:01,On Time,N/A,Leisure
 115,03/11/2026,BD,16:17,On Time,N/A,Leisure
 116,03/11/2026,SL,16:39,On Time,N/A,Leisure
-,,,,,,
+117,05/11/2026,SL,07:38,On Time,N/A,University
+118,05/11/2026,EL,07:59,Late,08:38,University
+119,05/11/2026,BD,12:06,On Time,N/A,Leisure
+120,05/11/2026,EL,12:13,On Time,12:53,Leisure
+121,05/11/2026,BD,12:54,On Time,N/A,Leisure
+122,05/11/2026,SL,13:09,On Time,N/A,Leisure
