@@ -121,3 +121,11 @@ ID,Date,Type,Touch In,Status,Touch Out,Reason
 120,05/11/2026,EL,12:13,On Time,12:53,Leisure
 121,05/11/2026,BD,12:54,On Time,N/A,Leisure
 122,05/11/2026,SL,13:09,On Time,N/A,Leisure
+123,06/11/2026,SL,08:51,On Time,N/A,University
+124,06/11/2026,EL,09:13,On Time,09:50,University
+125,06/11/2026,BD,15:57,On Time,N/A,Leisure
+126,06/11/2026,EL,16:04,On Time,16:42,Leisure
+127,06/11/2026,SL,16:47,On Time,N/A,Leisure
+128,10/11/2026,BD,13:55,On Time,N/A,Leisure
+129,10/11/2026,BD,14:20,On Time,N/A,Leisure
+,,,,,,
