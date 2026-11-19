@@ -25,7 +25,7 @@ void setup() {
   music = new SoundFile(this, "Internal Needs.mp3");
   music.loop();
   //Loads in the CSV file.
-  table = loadTable("C:/Users/pnurd/OneDrive - City St George's, University of London/MSci Computer Science (G401)/Year 1/Programming in Java - IN1007/Creative Coding/Portfolio/Dear Data Spreadsheet.csv", "header, csv");
+  table = loadTable("C:/Users/pnurd/OneDrive - City St George's, University of London/MSci Computer Science (G401)/Year 1/Creative Coding - IN1007/Portfolio/Dear Data Spreadsheet.csv", "header, csv");
 
   //Checks if the CSV file actually exists.
   if (table == null) {
