@@ -132,7 +132,7 @@ void draw() {
 
   fill(0);
   textAlign(LEFT, BOTTOM);
-  text("Move the mouse over the balls to nudge them; move away to restore their data positions.", 20, height - 10);
+  text("Move the mouse over the balls to nudge them away from their positions and move away to restore their data positions.", 20, height - 10);
 }
 
 //Defining the class that I will be using to create a ball to represent each different transport method.
