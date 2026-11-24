@@ -15,15 +15,25 @@ LocalTime[] touchIns;
 String[] statuses;
 LocalTime[] touchOuts;
 String[] reasons;
+final float interactionSoundVolume = 0.35;
+final float musicToInteractionVolume = 0.8;
 SoundFile music;
+SoundFile interactionSound;
+boolean wasInteracting = false;
+int interactionSoundMode = 0;
+int interactionStartedAt;
+int interactionSegmentStartedAt;
+int departureStartedAt;
 //This will hold all the values passed back from the TransportMethod class.
 TransportMethod[] methods;
 
 
 void setup() {
   size(1000,1000);
-  music = new SoundFile(this, "Internal Needs.mp3");
+  music = new SoundFile(this, "External Questioning (Dear Data Remix).mp3");
   music.loop();
+  music.amp(interactionSoundVolume * musicToInteractionVolume);
+  interactionSound = new SoundFile(this, "External Questioning (Dear Data Remix).mp3");
   //Loads in the CSV file.
   table = loadTable("C:/Users/pnurd/OneDrive - City St George's, University of London/MSci Computer Science (G401)/Year 1/Creative Coding - IN1007/Portfolio/Dear Data Spreadsheet.csv", "header, csv");
 
@@ -125,14 +135,57 @@ void draw() {
   strokeWeight(2);
   noStroke();
 
+  boolean mouseInteracting = false;
   for (TransportMethod m : methods) {
-    m.updatePosition();
+    if (m.updatePosition()) {
+      mouseInteracting = true;
+    }
     m.draw();
   }
+
+  updateInteractionSound(mouseInteracting);
 
   fill(0);
   textAlign(LEFT, BOTTOM);
   text("Move the mouse over the balls to nudge them away from their positions and move away to restore their data positions.", 20, height - 10);
+}
+
+void updateInteractionSound(boolean interacting) {
+  int now = millis();
+
+  if (interacting != wasInteracting) {
+    interactionSound.pause();
+
+    if (interacting) {
+      interactionSound.rate(1);
+      interactionSound.amp(0);
+      interactionSound.jump(111);
+      interactionSoundMode = 1;
+      interactionStartedAt = now;
+      interactionSegmentStartedAt = now;
+    } else {
+      interactionSound.rate(1);
+      interactionSound.amp(interactionSoundVolume);
+      interactionSound.jump(114);
+      interactionSoundMode = 2;
+      departureStartedAt = now;
+    }
+
+    wasInteracting = interacting;
+  }
+
+  if (interactionSoundMode == 1) {
+    float fadeIn = constrain((now - interactionStartedAt) / 700.0, 0, 1);
+    interactionSound.amp(interactionSoundVolume * fadeIn);
+
+    if (now - interactionSegmentStartedAt >= 2500) {
+      interactionSound.jump(111);
+      interactionSegmentStartedAt = now;
+    }
+  } else if (interactionSoundMode == 2 && now - departureStartedAt >= 2000) {
+    interactionSound.pause();
+    interactionSoundMode = 0;
+  }
 }
 
 //Defining the class that I will be using to create a ball to represent each different transport method.
@@ -217,7 +270,7 @@ class TransportMethod {
   }
   
   //Temporarily nudges balls away from the mouse while keeping their data positions unchanged.
-  void updatePosition() {
+  boolean updatePosition() {
     float influenceRadius = 120;
     float distance = dist(dataPosition.x, dataPosition.y, mouseX, mouseY);
     float targetX = dataPosition.x;
@@ -240,6 +293,7 @@ class TransportMethod {
     targetY = constrain(targetY, radius, height - radius);
     position.x = lerp(position.x, targetX, 0.15);
     position.y = lerp(position.y, targetY, 0.15);
+    return dist(dataPosition.x, dataPosition.y, targetX, targetY) > 0.5;
   }
 
   //This is the draw method which will draw the ball at the current position.
