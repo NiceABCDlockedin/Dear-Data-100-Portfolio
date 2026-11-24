@@ -126,12 +126,18 @@ void draw() {
   noStroke();
 
   for (TransportMethod m : methods) {
+    m.updatePosition();
     m.draw();
   }
+
+  fill(0);
+  textAlign(LEFT, BOTTOM);
+  text("Move the mouse over the balls to nudge them; move away to restore their data positions.", 20, height - 10);
 }
 
 //Defining the class that I will be using to create a ball to represent each different transport method.
 class TransportMethod {
+  PVector dataPosition; //Fixed position mapped from the journey data
   PVector position; //Position of the ball
   float radius;     //Radius of the ball
   color colour;     //Colour to be used on the ball
@@ -159,7 +165,8 @@ class TransportMethod {
     }
     
     //Creating a new PVector for each new ball created.
-    position = new PVector(x, yPos);
+    dataPosition = new PVector(x, yPos);
+    position = dataPosition.copy();
     
     if (type == null) {
       type = "";
@@ -209,6 +216,32 @@ class TransportMethod {
     return adjustedColour;
   }
   
+  //Temporarily nudges balls away from the mouse while keeping their data positions unchanged.
+  void updatePosition() {
+    float influenceRadius = 120;
+    float distance = dist(dataPosition.x, dataPosition.y, mouseX, mouseY);
+    float targetX = dataPosition.x;
+    float targetY = dataPosition.y;
+
+    if (distance < influenceRadius) {
+      float dx = dataPosition.x - mouseX;
+      float dy = dataPosition.y - mouseY;
+      if (distance < 0.001) {
+        dy = -1;
+        distance = 1;
+      }
+
+      float push = 45 * (1 - distance / influenceRadius);
+      targetX += dx / distance * push;
+      targetY += dy / distance * push;
+    }
+
+    targetX = constrain(targetX, radius, width - radius);
+    targetY = constrain(targetY, radius, height - radius);
+    position.x = lerp(position.x, targetX, 0.15);
+    position.y = lerp(position.y, targetY, 0.15);
+  }
+
   //This is the draw method which will draw the ball at the current position.
   void draw() {
       noStroke();
