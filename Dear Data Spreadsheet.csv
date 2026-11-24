@@ -140,3 +140,9 @@ ID,Date,Type,Touch In,Status,Touch Out,Reason
 139,17/11/2026,EL,15:01,On Time,15:38,Leisure
 140,17/11/2026,SL,15:39,On Time,N/A,Leisure
 141,17/11/2026,BD,17:08,On Time,N/A,Leisure
+148,23/11/2026,SL,07:24,On Time,N/A,University
+149,23/11/2026,EL,07:41,On Time,08:19,University
+150,23/11/2026,EL,11:06,On Time,11:46,Leisure
+151,23/11/2026,SL,11:49,On Time,N/A,Leisure
+152,23/11/2026,SL,15:46,On Time,N/A,Leisure
+153,23/11/2026,SL,19:39,On Time,N/A,Leisure
